@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>预定模式授权 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">预定模式授权</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy auth">
+        <div class="field-group">
+            <div class="field-panel">
+                <div class="field-grid">
+                    <div class="field-row">
+                        <div class="col-unset">
+                            预订范围：机票、酒店、火车票、用车
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-panel">
+                <div class="field-grid">
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">授权方式</span>
+                            <i class="icon-qa" onclick="tipShow()">?</i>
+                        </div>
+                        <div class="col-4-3 way-item">
+                            <span class="txt-control">在线授权</span>
+                            <i class="arr-right-grid"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="show-box">
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权人</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <span class="txt-control">统一授权人</span>
+                                    <i class="arr-right-grid"></i>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">统一授权人</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <span class="txt-void">请选择统一授权人</span>
+                                    <i class="arr-right-grid"></i>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权人邮箱</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <input type="text" class="form-control" placeholder="请输入授权人邮箱">
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权人邮箱</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <span class="txt-control">有<span class="txt-active">3</span>位上级领导未设置</span>
+                                    <i class="arr-right-grid"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-box ds-none">
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权分类</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <span class="txt-control">统一授权密码</span>
+                                    <i class="arr-right-grid"></i>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权密码</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <div class="pwd-eye">
+                                        <i class="icon-eye icon-eye-open"></i>
+                                        <input type="text" class="form-control" placeholder="请输入统一授权密码（限6位数字）">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-4-1">
+                                    <span class="txt-field">授权密码</span>
+                                </div>
+                                <div class="col-4-3">
+                                    <div class="pwd-eye">
+                                        <i class="icon-eye icon-eye-close"></i>
+                                        <input type="password" class="form-control" placeholder="请输入统一授权密码（限6位数字）">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="col-1-1">
+                                    <span class="txt-control">默认个人授权密码为公司ID</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <p class="note-box">
+                    <i class="icon-payment icon-payment-warn"></i>
+                    上级领导邮箱未设置会导致邮件授权功能不可用（携程商旅APP授权和网站授权不受影响）
+                </p>
+            </div>
+        </div>
+        <div class="tip-content ds-none">
+            <p class="title">密码授权</p>
+            <p class="con">推荐用于管理员统一代订模式，提交订单时需输入授权密码，授权密码校验通过后方可提交订单。</p>
+            <p class="title">在线授权</p>
+            <p class="con">推荐用于员工自行预订模式，可通过APP、网站、邮件对员工进行预订授权。</p>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <div class="popup-box bottom ds-none">
+        <div class="popup-box-header">授权方式</div>
+        <div class="popup-box-list">
+            <div class="popup-box-item">
+                <span class="popup-box-txt">在线授权（推荐用于员工自行预订模式）</span>
+                <i class="icon icon-checked"></i>
+            </div>
+            <div class="popup-box-item">
+                <span class="popup-box-txt">密码授权（推荐用于管理员统一代订模式）</span>
+                <i class="icon icon-checked ds-none"></i>
+            </div>
+
+        </div>
+    </div>
+    <div class="v-modal ds-none"></div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    var wayItem = $('.way-item')
+    var popItem = $('.popup-box-item')
+    var showBox = $('.show-box')
+    popItem.click(function () {
+        var txt = $(this).find('.popup-box-txt').text();
+        var index = $(this).index();
+        wayItem.find('.txt-control').text(txt);
+        showBox.eq(index).removeClass('ds-none').siblings().addClass('ds-none');
+        if (index) {
+            $('.note-box').addClass('ds-none')
+        }
+        $(this).siblings().find('.icon-checked').addClass('ds-none');
+        $(this).find('.icon-checked').removeClass('ds-none');
+        $('.popup-box').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+
+    })
+    wayItem.click(function () {
+        $('.v-modal').removeClass('ds-none');
+        $('.popup-box').removeClass('ds-none');
+    })
+    $('.v-modal, .tip-content').click(function () {
+        $('.v-modal').addClass('ds-none');
+        $('.popup-box').addClass('ds-none');
+        $('.tip-content').addClass('ds-none');
+    })
+    function tipShow() {
+        $('.v-modal').removeClass('ds-none');
+        $('.tip-content').removeClass('ds-none')
+    }
+</script>

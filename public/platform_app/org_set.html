@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>组织架构设置</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">组织架构设置</h1>
+        </div>
+        <div class="nav-right">
+            <span class="btn-nav-txt-white"></span>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy">
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">设置方式</span>
+                    </div>
+                    <div class="col-4-3" id="changeItem">
+                        <span class="txt-normal">同步企业微信通讯录（可见范围内）</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+                <div class="field-wrapper">
+                    <div class="field-row">
+                        <div class="col-1-1">
+                            <span class="txt-tip">
+                                携程商旅已为您同步企微通讯录（可见范围内）至员工组织架构。建议您在企业微信-管理后台中设置携程商旅可见范围为全公司以同步完整的组织架构，获得更好的携程商旅服务体验。</span>
+                        </div>
+                    </div>
+                    <div class="field-row" style="display:none">
+                        <div class="col-1-1">
+                            <span class="txt-tip">
+                                携程商旅将停止企业微信通讯录组织架构同步，仅同步企业微信员工信息。选择本选项后，若您希望切换至同步企业微信通讯录，需联系贵司的差旅负责人进行设置。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix-bottom-bar">
+            <div class="flexbox">
+                <div class="flex-item">
+                    <span class="btn-passed btn-linear">保存</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <!-- 弹框 -->
+    <div class="popup-box bottom ds-none">
+        <div class="popup-box-header">设置方式</div>
+        <div class="popup-box-list">
+            <div class="popup-box-item">
+                <span class="popup-box-txt">同步企业微信通讯录（可见范围内）</span>
+                <i class="icon icon-checked"></i>
+            </div>
+            <div class="popup-box-item">
+                <span class="popup-box-txt">自行维护携程商旅组织架构</span>
+                <i class="icon icon-checked ds-none"></i>
+            </div>
+        </div>
+    </div>
+    <div class="v-modal ds-none"></div>
+
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    var changeItem = $('#changeItem');
+    var popItem = $('.popup-box').find('.popup-box-item');
+    var activeCon = $('.field-wrapper').find('.field-row');
+    changeItem.click(function () {
+        $('.popup-box').removeClass('ds-none');
+        $('.v-modal').removeClass('ds-none');
+    })
+    popItem.click(function () {
+        var index = $(this).index();
+        activeCon.eq(index).show().siblings().hide();
+        $(this).find('.icon-checked').removeClass('ds-none');
+        $(this).siblings().find('.icon-checked').addClass('ds-none');
+        var txt = $(this).find('.popup-box-txt').text();
+        changeItem.find('.txt-normal').text(txt);
+        $('.popup-box').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    })
+</script>

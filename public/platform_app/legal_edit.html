@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>编辑法人信息 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">编辑法人信息</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="staff-add">
+        <div class="normal-wrapper">
+            <div class="field-panel">
+                <div class="field-grid">
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">法人姓名</span>
+                        </div>
+                        <div class="col-4-3">
+                            <div class="switch-lang">
+                                <span class="switch-item cur">中</span>
+                                <span class="switch-item">英</span>
+                            </div>
+                            <div class="passport-wrap cn">
+                                <!-- 默认为中文+cn，英文切换去除cn -->
+                                <div class="name-item lastname">
+                                    <input type="text" class="form-control" placeholder="请输入您的中文名" value="张三">
+                                </div>
+                                <div class="name-item firstname">
+                                    <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">证件类型</span>
+                        </div>
+                        <div class="col-4-3">
+                            <span class="txt-control">身份证</span>
+                            <i class="arr-right-grid"></i>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">证件号</span>
+                        </div>
+                        <div class="col-4-3">
+                            <input type="email" class="form-control" placeholder="请输入您的证件号">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 内容 E -->
+
+    <div class="fix-bottom-bar">
+        <div class="flexbox">
+            <div class="flex-item">
+                <span class="btn-passed btn-linear" onclick="msgboxShow()">提交</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="msgbox ds-none">
+        <div class="msgbox-header">
+            <div class="msgbox-header-title"></div>
+        </div>
+        <div class="msgbox-content">
+            <div class="msgbox-content-message">提交失败</div>
+        </div>
+        <div class="msgbox-btns">
+            <div class="msgbox-btn msgbox-btn-main" onclick="msgboxHide()">确认</div>
+        </div>
+    </div>
+    <div class="v-modal ds-none"></div>
+
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script>
+        // msgbox
+        function msgboxShow() {
+            $('.v-modal').removeClass('ds-none');
+            $('.msgbox').removeClass('ds-none');
+        }
+        function msgboxHide() {
+            $('.msgbox').addClass('ds-none');
+            $('.v-modal').addClass('ds-none');
+        }
+
+        // 语言切换
+        $(".switch-lang").on("click", ".switch-item", function () {
+            var idx = $(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+
+            if (idx == 0) {
+                $(".passport-wrap").addClass("cn");
+            } else {
+                $(".passport-wrap").removeClass("cn");
+            }
+        })
+    </script>
+</body>
+
+</html>

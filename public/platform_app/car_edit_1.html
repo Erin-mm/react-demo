@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>编辑用车差标</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">编辑用车差标</h1>
+        </div>
+        <div class="nav-right">
+            <span class="btn-nav-txt-white">删除</span>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy">
+        <div class="field-panel">
+            <!-- 马上叫车 -->
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">适用产品</span>
+                    </div>
+                    <div class="col-4-3" onclick="popShow('product')">
+                        <span class="txt-control">马上叫车</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">员工职级</span>
+                    </div>
+                    <div class="col-4-3">
+                        <span class="txt-control">一级、二级</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">车型等级</span>
+                    </div>
+                    <div class="col-4-3">
+                        <span class="txt-control">经济型、舒适型、商务型、豪华型、环保型</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">用车时间</span>
+                    </div>
+                    <div class="col-4-3">
+                        <p>不限</p>
+                        <p class="disable">时段不限</p>
+                    </div>
+                </div>
+                <div class="field-row field-row-multiple">
+                    <div class="col-4-1">
+                        <span class="txt-field txt-middle">用车时间</span>
+                    </div>
+                    <div class="col-4-3">
+                        <div class="inner-row">
+                            <i class="icon icon-delete"></i>
+                            <div class="wrapper">
+                                <p class="txt-ellipsis">周一、周二、周三、周四、周五、周六、周日</p>
+                                <p class="disable">08:00~18:00</p>
+                            </div>
+                            <i class="arr-right-grid"></i>
+                        </div>
+                        <div class="inner-row inner-row-delete">
+                            <i class="icon icon-delete icon-delete-rotate"></i>
+                            <div class="wrapper">
+                                <p class="txt-ellipsis">周一、周二、周三、周四、周五、周六、周日</p>
+                                <p class="disable">08:00~18:00</p>
+                            </div>
+                            <div class="del-block">
+                                <span>删除</span>
+                            </div>
+                        </div>
+                        <div class="inner-row">
+                            <i class="icon icon-add"></i>
+                            <div class="wrapper">
+                                <p class="txt-add">新增用车时间</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">单次上限</span>
+                    </div>
+                    <div class="col-4-3">
+                        <input type="text" class="form-control" placeholder="请填写用车费用上限">
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-black-tip">必须选择可订车型中的最低价产品</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input" checked>
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">超标管控</span>
+                    </div>
+                    <div class="col-4-3" onclick="popShow('management')">
+                        <span class="txt-control">选择超标原因</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix-bottom-bar">
+            <div class="flexbox">
+                <div class="flex-item">
+                    <span class="btn-passed btn-linear">保存</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <!-- 保存按钮 -->
+
+    <!-- 底部弹框 -->
+    <div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">超标管控</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国内接送机/火车</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国际接送机</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">马上叫车</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国内包车</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">超标管控</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">选择超标原因</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">不可公司账户支付</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">不可预订</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 遮罩 -->
+    <div class="v-modal ds-none" onclick="popHide()"></div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    function popShow(item) {
+        $('.v-modal').removeClass('ds-none');
+        if (item === 'product') {
+            $('.popup-box').eq(0).removeClass('ds-none');
+        } else {
+            $('.popup-box').eq(1).removeClass('ds-none');
+        }
+    }
+    function popHide() {
+        $('.popup-box').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    }
+</script>

@@ -1,0 +1,129 @@
+@import '~antd/dist/antd.css';
+@import 'reset.scss';
+@import 'utils.scss';
+.ant-layout {
+  &-header {
+    padding-left: 100px;
+  }
+  .logo {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    height: 48px;
+    width: 48px;
+    background: url('../images/logo.png') no-repeat 0/cover;
+  }
+}
+
+.ant-menu {
+  font-family: "Microsoft YaHei";
+}
+
+.page-con {
+  height: 667px;
+  .left {
+    width: 365px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: $grey-1;
+    border: 4px solid #eee;
+    iframe {
+      border: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .right {}
+}
+
+.component-con {
+  color: #314659;
+  font-size: 14px;
+  line-height: 2;
+  .component-des {
+    h1 {
+      margin-top: 8px;
+      margin-bottom: 20px;
+      color: #0d1a26;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 38px;
+    }
+    h2 {
+      clear: both;
+      color: #0d1a26;
+      font-weight: 500;
+      margin: 1.6em 0 .6em;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    ul {
+      padding: 0;
+    }
+    ul>li {
+      list-style-type: circle;
+      margin-left: 20px;
+      padding-left: 4px;
+    }
+  }
+}
+
+.code-box {
+  border: 1px solid #ebedf0;
+  border-radius: 2px;
+  position: relative;
+  margin: 0 0 16px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  width: 700px;
+  min-width: 500px;
+  margin-right: 2%;
+  &-demo {
+    position: relative;
+    padding: 42px 24px 50px;
+    border-bottom: 1px solid #ddd;
+    background: #f5f6f7;
+  }
+  &-text {
+    position: relative;
+    background: #f5f6f7;
+    padding: 18px 32px;
+    .title {
+      position: absolute;
+      top: -15px;
+      left: 27px;
+      padding: 0 5px;
+      background: #f5f6f7;
+    }
+    .icon-code {
+      position: absolute;
+      right: 13px;
+      bottom: 16px;
+      color: rgba($color: #000000, $alpha: 0.4);
+      font-size: 18px;
+      cursor: pointer;
+      transition: color .3s;
+      &:hover {
+        color: rgba($color: #000000, $alpha: 0.8);
+      }
+    }
+  }
+  &-code {
+    position: relative;
+    padding: 16px 32px 32px 32px;
+    .anticon-copy {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      font-size: 18px;
+      cursor: pointer;
+      color: rgba($color: #000000, $alpha: 0.4);
+      transition: color .3s;
+      &:hover {
+        color: rgba($color: #000000, $alpha: 0.8);
+      }
+    }
+  }
+}

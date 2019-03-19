@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <title>赠险投保</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- 静态资源引用编译后路径 -->
+  <link rel="stylesheet" href="./assets/style/manage.css?20180814">
+
+</head>
+
+<body>
+  <!-- 页头 S -->
+  <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="nav-close">
+            <i class="icon-ins icon-ins-close"></i>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">赠险投保</h1>
+        </div>
+    </div>
+</div>
+  <!-- 页头 E -->
+  <div class="insurance-given">
+    <div class="top-header">
+      <div class="left">
+        <i class="icon-ins icon-ins-present"></i>
+        <div class="content">
+          <h3>
+            <p>境内旅行意外伤害保险</p>
+            <i class="arrow"></i>
+          </h3>
+          <p class="note">众安在线保险股份有限公司</p>
+        </div>
+      </div>
+      <div class="right">
+        <p class="email">发送条款至邮箱</p>
+      </div>
+    </div>
+    <div class="banner">
+    </div>
+
+    <!-- 有被保人状态 -->
+    <div class="tab">
+      <div class="item active">
+        获赠份数(10份）
+      </div>
+      <div class="item">被保份数（3份）</div>
+    </div>
+    <div>
+      <div class="out-wrapper">
+        <div class="list">
+          <div class="block">
+            <p class="name">
+              被保人1
+              <i class="icon-ins icon-ins-close"></i>
+            </p>
+            <ul>
+              <li class="item">
+                <span class="tit">真实姓名</span>
+                <input type="text" value="贾丽丽" placeholder="请填写真实姓名">
+              </li>
+              <li class="item">
+                <span class="tit">身份证</span>
+                <input type="text" value="31010298604233324" placeholder="请填写身份证号">
+              </li>
+              <li class="item">
+                <span class="tit">保险日期</span>
+                <span>2018/10/1-2018/10/7</span>
+                <div class="calendar">
+                  <p><i class="icon-ins icon-ins-calendar"></i></p>
+                  <p>更改日期</p>
+                </div>
+              </li>
+              <li class="item">
+                <span class="tit">手机号码</span>
+                <input type="text" value="13019917832" placeholder="请填写手机号码">
+              </li>
+              <li class="item">
+                <span class="tit">邮箱</span>
+                <input type="text" value="jll@ctrip.com" placeholder="请填写邮箱">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="add">
+          <i class="icon-ins icon-ins-add"></i>
+          <span>添加被保人</span>
+        </div>
+        <div class="tip">
+          <label class="field-checkbox">
+            <input type="checkbox" class="field-checkbox-input" checked="">
+            <span class="field-checkbox-core"></span>
+          </label>
+          <div class="content">
+            已知晓为赠险，且已阅读并同意<span class="highlight">境内旅行意外伤害保险须知 </span>。
+            投保关系为其他，投保内容及保险金额已向被保险人明确说明，
+            并征得其同意。
+          </div>
+        </div>
+        <div class="fix-bottom-bar">
+          <div class="flexbox">
+            <div class="flex-item">
+              <span class="btn-passed btn-linear">提 交</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="out-wrapper" style="display:none">
+        <div class="list">
+          <div class="block">
+            <p class="name">
+              被保人1
+            </p>
+            <ul>
+              <li class="item">
+                <span class="tit">真实姓名</span>
+                <span>贾丽丽</span>
+              </li>
+              <li class="item">
+                <span class="tit">身份证</span>
+                <span>31010298604233324</span>
+              </li>
+              <li class="item">
+                <span class="tit">保险日期</span>
+                <span>2018/10/1-2018/10/7</span>
+              </li>
+              <li class="item">
+                <span class="tit">手机号码</span>
+                <span>13019917832</span>
+              </li>
+              <li class="item">
+                <span class="tit">邮箱</span>
+                <span>jll@ctrip.com</span>
+              </li>
+              <li class="item">
+                <span class="tit">保单号</span>
+                <span>2301388749299</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 无被保人状态 -->
+    <!-- <div class="tab">
+      <div class="item active">
+        获赠份数（0份）
+      </div>
+      <div class="item disabled">被保份数</div>
+    </div>
+    <div>
+      <div class="no-data">
+        <div class="icon-ins icon-ins-blank"></div>
+        <p>无订单通知</p>
+      </div>
+      <div class="add">
+        <i class="icon-ins icon-ins-add"></i>
+        <span>添加被保人</span>
+      </div>
+    </div> -->
+
+
+  </div>
+</body>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+  $('.tab .item').click(function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    var index = $(this).index()
+    $('.out-wrapper').eq(index).show().siblings().hide()
+  })
+</script>
+
+</html>

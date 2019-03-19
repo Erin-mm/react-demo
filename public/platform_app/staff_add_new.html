@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>新增员工 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">新增员工</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy staff-add">
+        <div class="navbar" id="tabNav">
+            <span class="nav-item cur">手动添加</span>
+            <span class="nav-item">员工邀请</span>
+            <span class="nav-item">关联导入</span>
+        </div>
+        <div id="tabContent" class="tab-wrapper">
+            <div class="tab-content">
+                <p class="note-box">
+                    <i class="icon-payment icon-payment-warn"></i>
+                    可在PC携程商旅-差旅管理-人员管理中<span class="active">批量维护员工信息</span>
+                </p>
+                <div class="field-panel">
+                    <div class="edit-header">
+                        <p>基础信息</p>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">姓名</span>
+                                <i class="icon-qa">?</i>
+                            </div>
+                            <div class="col-4-3">
+                                <div class="switch-lang">
+                                    <span class="switch-item cur">中</span>
+                                    <span class="switch-item">英</span>
+                                </div>
+                                <div class="passport-wrap cn">
+                                    <!-- 默认为中文+cn，英文切换去除cn -->
+                                    <div class="name-item lastname">
+                                        <input type="text" class="form-control" placeholder="请输入您的中文名">
+                                    </div>
+                                    <div class="name-item firstname">
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">员工编号</span>
+                            </div>
+                            <div class="col-4-3">
+                                <input type="text" class="form-control" placeholder="请输入您的员工编号（非必填）">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">+86</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                            <div class="col-4-3">
+                                <input type="number" class="form-control" placeholder="请输入您的手机号">
+                            </div>
+                        </div>
+                        <!-- 风控模块 -->
+                        <!-- <div class="field-row">
+                            <div class="col-1-1">
+                                <div class="cpt" style="height:34px;margin-right:10px;background-color:#E8E8E8;"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">验证码</span>
+                            </div>
+                            <div class="col-4-3">
+                                <input type="number" class="form-control" placeholder="请输入验证码">
+                                <span class="vcode">获取验证码</span>
+                            </div>
+                        </div> -->
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">邮箱</span>
+                            </div>
+                            <div class="col-4-3">
+                                <input type="email" class="form-control" placeholder="请输入您的邮箱地址（非必填）">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">部门</span>
+                            </div>
+                            <div class="col-4-3">
+                                <span class="txt-control">默认部门</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">上级领导</span>
+                            </div>
+                            <div class="col-4-3">
+                                <span class="txt-control">胡大拿</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">员工角色</span>
+                            </div>
+                            <div class="col-4-3">
+                                <span class="txt-control">普通员工</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">职级</span>
+                            </div>
+                            <div class="col-4-3">
+                                <span class="txt-control">一级</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-panel">
+                    <div class="edit-header">
+                        <p>证件信息</p>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-row field-row-multiple">
+                            <div class="col-4-1">
+                                <span class="txt-field txt-middle">证件类型</span>
+                            </div>
+                            <div class="col-4-3">
+                                <div class="inner-row">
+                                    <i class="icon icon-delete"></i>
+                                    <div class="wrapper">
+                                        <div class="wrapper-operate">
+                                            <p class="txt-ellipsis">身份证
+                                            </p>
+                                            <i class="arr-right-grid"></i>
+                                        </div>
+                                        <div class="wrapper-operate">
+                                            <input type="text" placeholder="请输入证件号">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner-row inner-row-delete">
+                                    <i class="icon icon-delete icon-delete-rotate"></i>
+                                    <div class="wrapper">
+                                        <div class="wrapper-operate">
+                                            <p class="txt-ellipsis">身份证
+                                            </p>
+                                        </div>
+                                        <div class="wrapper-operate">
+                                            <input type="text" placeholder="请输入证件号">
+                                        </div>
+                                    </div>
+                                    <div class="del-block">
+                                        <span>删除</span>
+                                    </div>
+                                </div>
+                                <div class="inner-row">
+                                    <i class="icon icon-add"></i>
+                                    <div class="wrapper">
+                                        <div class="wrapper-operate">
+                                            <p class="txt-add">添加其他证件</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fix-bottom-bar">
+                    <div class="flexbox">
+                        <div class="flex-item">
+                            <span class="btn-passed btn-linear">保存</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" style="display:none">
+                <div class="bind-phone">
+                    <div class="bind-result">
+                        <i class="qrcode-invite"></i>
+                        <h3>手机邀请码</h3>
+                        <p>管理员可以将含有二维码的图片分享到公司社群（如企业微信、云之家等），员工可直接扫码申请。</p>
+                    </div>
+                    <div class="app-channel">
+                        <h3>其他邀请方式</h3>
+                        <ul class="channel-list">
+                            <li>
+                                <i class="icon-app-wx"></i>
+                                <p>微信邀请</p>
+                            </li>
+                            <li>
+                                <i class="icon-app-qq"></i>
+                                <p>QQ邀请</p>
+                            </li>
+                            <li>
+                                <i class="icon-app-link"></i>
+                                <p>链接邀请</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" style="display:none">
+                <p class="note-box">
+                    <i class="icon-payment icon-payment-warn"></i>
+                    可将携程旅行账号常用旅客信息导入携程商旅
+                </p>
+                <div class="field-panel">
+                    <div class="edit-header">
+                        <p>携程旅行账号验证</p>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-row">
+                            <div class="col-4-1">
+                                <span class="txt-field">验证方式</span>
+                            </div>
+                            <div class="col-4-3 way-item">
+                                <span class="txt-control">账号密码验证</span>
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="show-box">
+                                <div class="field-row">
+                                    <div class="col-4-1">
+                                        <span class="txt-field">+86</span>
+                                        <i class="arr-right-grid"></i>
+                                    </div>
+                                    <div class="col-4-3">
+                                        <input type="number" class="form-control" placeholder="请输入注册或绑定手机号">
+                                    </div>
+                                </div>
+
+                                <div class="field-row">
+                                    <div class="col-4-1">
+                                        <span class="txt-field">验证码</span>
+                                    </div>
+                                    <div class="col-4-3">
+                                        <input type="number" class="form-control" placeholder="请输入验证码">
+                                        <span class="vcode">发送验证码</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="show-box ds-none">
+                                <div class="field-row">
+                                    <div class="col-4-1">
+                                        <span class="txt-field">账号</span>
+                                    </div>
+                                    <div class="col-4-3">
+                                        <input type="text" class="form-control" placeholder="请输入国内手机号/用户名/邮箱/卡号">
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <div class="col-4-1">
+                                        <span class="txt-field">密码</span>
+                                    </div>
+                                    <div class="col-4-3">
+                                        <input type="password" class="form-control" placeholder="请输入登录密码">
+                                    </div>
+                                </div>
+                                <!-- 风控模块 -->
+                                <div class="field-row">
+                                    <div class="col-1-1">
+                                        <div class="cpt" style="height:34px;background-color:#E8E8E8;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fix-bottom-bar">
+                    <div class="flexbox">
+                        <div class="flex-item">
+                            <span class="btn-passed btn-linear">验证账号</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <div class="popup-box bottom ds-none">
+        <div class="popup-box-header">验证方式</div>
+        <div class="popup-box-list">
+            <div class="popup-box-item">
+                <span class="popup-box-txt">账号密码验证</span>
+                <i class="icon icon-checked"></i>
+            </div>
+            <div class="popup-box-item">
+                <span class="popup-box-txt">手机动态密码验证</span>
+                <i class="icon icon-checked ds-none"></i>
+            </div>
+
+        </div>
+    </div>
+    <div class="v-modal ds-none"></div>
+
+
+
+    <!-- toast -->
+    <!-- <div class="toast">
+        请填写姓名
+    </div> -->
+
+    <!-- modal -->
+    <div class="modal" style="display: none;">
+        <h3>姓名填写说明</h3>
+        <p>1.员工信息将被作为出行人信息，请与所持证件姓名保持一致</p>
+        <p>2.中文姓名可按中国大陆身份证显示填写，如：王小龙</p>
+        <p>3.护照名可按照护照显示区域分姓和名，Middle name填写在First Name(名)栏中，不区分大小写。</p>
+    </div>
+
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script>
+        // tabnav demo
+        var tabNav = $("#tabNav");
+        var tabContent = $("#tabContent .tab-content");
+
+        tabNav.on('click', '.nav-item', function () {
+            var index = $(this).index();
+            $(this).addClass('cur').siblings().removeClass('cur');
+            tabContent.eq(index).show().siblings().hide();
+        })
+
+        // modal demo
+        var NameQa = $(".icon-qa");
+        var Modal = $(".modal");
+
+        NameQa.on('click', function () {
+            Modal.show();
+        })
+        Modal.on('click', function () {
+            $(this).hide();
+        })
+
+        // 语言切换
+        $(".switch-lang").on("click", ".switch-item", function () {
+            var idx = $(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+
+            if (idx == 0) {
+                $(".passport-wrap").addClass("cn");
+            } else {
+                $(".passport-wrap").removeClass("cn");
+            }
+        })
+
+        // 切换验证方式
+        var wayItem = $('.way-item')
+        var popItem = $('.popup-box-item')
+        var showBox = $('.show-box')
+        wayItem.click(function () {
+            $('.v-modal').removeClass('ds-none');
+            $('.popup-box').removeClass('ds-none');
+        })
+        popItem.click(function () {
+            var txt = $(this).find('.popup-box-txt').text();
+            var index = $(this).index();
+            wayItem.find('.txt-control').text(txt);
+            showBox.eq(index).removeClass('ds-none').siblings().addClass('ds-none');
+            $(this).siblings().find('.icon-checked').addClass('ds-none');
+            $(this).find('.icon-checked').removeClass('ds-none');
+            $('.popup-box').addClass('ds-none');
+            $('.v-modal').addClass('ds-none');
+
+        })
+
+    </script>
+</body>
+
+</html>

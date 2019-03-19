@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>审批授权方式 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">成本中心</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="cost">
+        <div class="cost-card border">
+            <div class="c-wrapper">
+                <h2>
+                    <i class="icon-pay"></i>
+                    <span>APP团队费用</span>
+                </h2>
+                <div class="flex-row">
+                    <div class="flex-row-1 right gray flex22">
+                        成本中心：
+                    </div>
+                    <div class="flex-row-3">
+                        成本中心1、成本中心2、成本中心3、成本中 心4、成本中心5
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-row-1 right gray flex22">
+                        员工范围：
+                    </div>
+                    <div class="flex-row-3">
+                        全员使用
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cost-card border">
+            <div class="c-wrapper">
+                <h2>
+                    <i class="icon-pay"></i>
+                    <span>业务团队费用成本</span>
+                </h2>
+                <div class="flex-row">
+                    <div class="flex-row-1 right gray flex22">
+                        成本中心：
+                    </div>
+                    <div class="flex-row-3">
+                        成本中心1
+                    </div>
+                </div>
+                <div class="flex-row flex-border">
+                    <div class="flex-row-1 right gray flex22">
+                        员工范围：
+                    </div>
+                    <div class="flex-row-3" id="more">
+                        指定员工（43）
+                    </div>
+                </div>
+                <div class="flex-row row-flex midCenter">
+                    <a href="" id="btn">展开全部员工</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+
+    <!-- 成本中心未配置 -->
+    <div class="cost cost-no">
+        <i class="icon-pay-big"></i>
+        <p class="cost-no-data">贵司暂未设置成本中心
+            <br> 可去PC端快速配置成本中心内容
+        </p>
+    </div>
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script>
+        function give_more(click_con, show_con) {
+            var bool_timeline = true;
+            click_con.on("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (bool_timeline) {
+                    bool_timeline = false;
+                    show_con.html('林倩倩、徐晓霞、徐霞客、林少江、王明军、王美娟、王明杰、王梦洁、王梦娇、王健林、林倩倩、徐晓霞、徐霞客、林少江、王明军、王美娟、王明杰、王梦洁、王梦娇、王健林、林倩倩、徐晓霞、徐霞客、林少江、王明军、王美娟、王明杰、王梦洁、王梦娇、王健林、林倩倩、徐晓霞、徐霞客、林少江')
+                    $(this).html('收起全部');
+                } else {
+                    bool_timeline = true;
+                    show_con.html('指定员工（43）')
+                    $(this).html('展开全部员工');
+                }
+            })
+        }
+        give_more($("#btn"), $("#more"));
+    </script>
+</body>
+
+</html>

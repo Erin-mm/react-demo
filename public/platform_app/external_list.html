@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>外部出行人</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">外部出行人</h1>
+        </div>
+        <div class="nav-right">
+            <span class="btn-nav-txt-blue"></span>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="external-list">
+        <div class="navbar" id="tabNav">
+            <span class="nav-item cur">出行人</span>
+            <span class="nav-item">出行人分组</span>
+        </div>
+        <div id="tabContent" class="tab-content">
+            <div class="tab-item">
+                <div class="fixed-input">
+                    <div class="search-box">
+                        <div class="wrapper">
+                            <i class="icon-payment icon-payment-search-big"></i>
+                            <input type="text" placeholder="请输入要查找的姓名" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-list">
+                    <ul>
+
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                        <li>
+                            <p class="name">张三</p>
+                            <p class="note">这里是备注</p>
+                            <span class="tel">13521548475</span>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="fix-bottom-bar" onclick="msgboxShow()">
+                    <div class="flexbox">
+                        <div class="flex-item">
+                            <span class="btn-passed btn-linear">
+                                <span class="plus">+</span>
+                                新增外部出行人</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-item ds-none">
+                <div class="search-list mt10">
+                    <ul>
+                        <li>
+                            <i class="icon-org icon-org-edit"></i>
+                            <span>外包员工（5人）</span>
+                            <i class="icon-arrow"></i>
+                        </li>
+                        <li>
+                            <i class="icon-org icon-org-edit"></i>
+                            <span>中移客户（4人）</span>
+                            <i class="icon-arrow"></i>
+                        </li>
+                        <li>
+                            <i class="icon-org icon-org-edit"></i>
+                            <span>员工家属（5人）</span>
+                            <i class="icon-arrow"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fix-bottom-bar" onclick="msgboxShow()">
+                    <div class="flexbox">
+                        <div class="flex-item">
+                            <span class="btn-passed btn-linear">
+                                <span class="plus">+</span>
+                                新增外部出行人分组</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="msgbox ds-none">
+            <div class="msgbox-header">
+                <div class="msgbox-header-title">新增分组</div>
+            </div>
+            <!-- 如无内容直接隐去即可 -->
+            <div class="msgbox-content">
+                <div class="input-box">
+                    <p class="title">分组名称：</p>
+                    <input type="text" placeholder="最多不超过15个字">
+                </div>
+            </div>
+            <div class="msgbox-btns">
+                <!-- 如只有一个btn直接隐去即可 -->
+                <div class="msgbox-btn msgbox-btn-main" onclick="msgboxHide()">确认</div>
+            </div>
+        </div>
+        <div class="v-modal ds-none"></div>
+    </div>
+    <!-- 内容 E -->
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    // tabnav demo
+    var tabNav = $("#tabNav");
+    var tabContent = $("#tabContent .tab-item");
+
+    tabNav.on('click', '.nav-item', function () {
+        var index = $(this).index();
+        $(this).addClass('cur').siblings().removeClass('cur');
+        tabContent.eq(index).show().siblings().hide();
+    })
+
+    // msgbox
+    function msgboxShow() {
+        $('.v-modal').removeClass('ds-none');
+        $('.msgbox').removeClass('ds-none');
+    }
+    function msgboxHide() {
+        $('.msgbox').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    }
+</script>

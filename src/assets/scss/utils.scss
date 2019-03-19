@@ -1,0 +1,33 @@
+// color
+// 主色
+$standardBlue:#4477FF;
+$standardOrange:#FF6600;
+// 渐变色
+@mixin gradientBgBlue($startColor:#5884F0, $endColor:#5D55CE) {
+  background-image: linear-gradient(90deg, $startColor 0%, $endColor 100%);
+}
+
+@mixin gradientBtnBlue($startColor:#5184FF, $endColor:#584EED) {
+  background-image: linear-gradient(90deg, $startColor 0%, $endColor 100%);
+}
+
+@mixin gradientBtnOrange($startColor:#FFC300, $endColor:#FF9000) {
+  background-image: linear-gradient(90deg, $startColor 0%, $endColor 100%);
+}
+// 辅助色--由浅至深
+$grey-1:#F8F8F8;
+$grey-2:#F2F2F2;
+$grey-3:#EEEEEE;
+$grey-4:#D8D8D8;
+$grey-5:#CCCCCC;
+$grey-6:#999999;
+$grey-7:#666666;
+$grey-8:#333333;
+// 拓展色--由浅至深
+$blue-1:#CCDDFF;
+$blue-2:#AACCFF;
+$blue-3:#6699FF;
+$orange-1:#FFFFDD;
+$orange-2:#FFB000;
+$orange-3:#FF9000;
+

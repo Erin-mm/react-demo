@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>职级</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">员工职级</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy edit-x">
+        <div class="field-panel">
+            <!-- 国内接送机/火车 & 国际接送机-->
+            <div class="field-grid">
+                <ul class="staff-list">
+                    <li>
+                        <div class="field-row staff-wrap slip">
+                            <div class="col-4-1">
+                                <span class="txt-field">一级（323）</span>
+                            </div>
+                            <div class="col-4-3" onclick="">
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <span class="btn-staff-delete">删除</span>
+                    </li>
+                    <li>
+                        <div class="field-row staff-wrap">
+                            <div class="col-4-1">
+                                <span class="txt-field">二级（323）</span>
+                            </div>
+                            <div class="col-4-3">
+
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <span class="btn-staff-delete">删除</span>
+                    </li>
+                    <li>
+                        <div class="field-row staff-wrap">
+                            <div class="col-4-1">
+                                <span class="txt-field">三级（323）</span>
+                            </div>
+                            <div class="col-4-3">
+
+                                <i class="arr-right-grid"></i>
+                            </div>
+                        </div>
+                        <span class="btn-staff-delete">删除</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fix-bottom-bar">
+            <div class="flexbox">
+                <div class="flex-item">
+                    <span class="btn-passed btn-linear" onclick="popShow('product')">&#43; 新增职级</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <!-- 保存按钮 -->
+
+    <!-- 底部弹框 -->
+    <div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">地区类别</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">一类城市</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">一类城市</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt disable">一类城市</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">一类城市</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 遮罩 -->
+    <div class="v-modal ds-none" onclick="popHide()"></div>
+    <!-- 弹出 -->
+    <div class="base-module ds-none" style="">
+        <div class="base-module-main">
+            <p>请输入职级名称：</p>
+            <input type="text" placeholder="最多不超过15个字符">
+        </div>
+        <div class="base-module-btn">
+            <a href="" onclick="popHide()">取消</a><a href="" onclick="popHide()">确定</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    function popShow(item) {
+        $('.v-modal').removeClass('ds-none');
+        if (item === 'product') {
+            $('.base-module').eq(0).removeClass('ds-none');
+        }
+    }
+
+    function popHide() {
+        $('.base-module').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    }
+</script>

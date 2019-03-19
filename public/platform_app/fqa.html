@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>FQA</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20180814">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">FAQ</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="fqa">
+        <div class="navbar" id="tabNav">
+            <div class="nav-item">
+                <span class="cur">售前问题</span>
+            </div>
+            <div class="nav-item">
+                <span>售后问题</span>
+            </div>
+            <div class="nav-item">
+                <span>财务问题</span>
+            </div>
+            <div class="nav-item">
+                <span>财务问题</span>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item">
+                <h3>1. 企业差旅管理有什么优势？</h3>
+                <p>企业通过专业的差旅管理系统，可以自动化的管控员工出行预订的行为，减化人工审核的流程，让差旅管理更高效、节省、便捷。</p>
+            </div>
+            <div class="item">
+                <h3>2. 在线签的协议在哪里查看？</h3>
+                <p>请贵司管理员登录商旅账户，进入首页，点击“公司协议”，即可查看签署协议。</p>
+            </div>
+            <div class="item">
+                <h3>3. 如何开通公司账户支付？</h3>
+                <p>目前携程商旅自助平台支持3种付款方式“现付（信用卡支付）、预存和月结（公司账户支付），预存和月结可进入差旅管理后，右上方点击申请，提交相关资料即可</p>
+            </div>
+            <div class="item">
+                <h3>4. 什么是授权？</h3>
+                <p>员工使用公司账户支付，机票，国内酒店，火车票，用车服务时，必须经过授权审批，对差旅行为进行控制，申请人提交订单后，授权人进行审批。</p>
+            </div>
+            <div class="item">
+                <h3>5. 预存开通首次需存多少钱？</h3>
+                <p>预存账户首次5000元起存，之后没有限制。</p>
+            </div>
+            <div class="item">
+                <h3>6. 预存款首次汇款何时到帐？</h3>
+                <p>汇款之后，系统10-20分钟会自动开通预存即可正常预订</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容 E -->
+
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script>
+        // tabnav demo
+        var tabNav = $("#tabNav");
+        tabNav.on('click', '.nav-item', function () {
+            var index = $(this).index();
+            $(this).find('span').addClass('cur')
+            $(this).siblings().find('span').removeClass('cur');
+        })
+
+    </script>
+</body>
+
+</html>

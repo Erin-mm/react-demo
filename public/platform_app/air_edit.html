@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>编辑机票差标</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">编辑机票差标</h1>
+        </div>
+        <div class="nav-right">
+            <span class="btn-nav-txt-white">删除</span>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy">
+        <!-- 按钮未打开 -->
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">舱等控制</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input">
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">最低价控制</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input">
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">提前预定</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input">
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 按钮打开 -->
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">舱等控制</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input" checked>
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">指定员工</span>
+                    </div>
+                    <div class="col-4-3">
+                        <span class="txt-control">张三三、孙晓丽、谢冰、赵仁师、张三、李四</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">最低价控制</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input" checked>
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">航班范围</span>
+                    </div>
+                    <div class="col-4-3">
+                        <span class="txt-normal">
+                            飞行3小时及以上，航班需为前后2 小时内最低价
+                        </span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-3">
+                        <span class="txt-field">提前预定</span>
+                    </div>
+                    <div class="col-4-1">
+                        <label class="field-switch">
+                            <input type="checkbox" class="field-switch-input" checked>
+                            <span class="field-switch-core"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">提前天数</span>
+                    </div>
+                    <div class="col-4-3">
+                        <input type="text" class="form-control" placeholder="请输入提前预定天数">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix-bottom-bar">
+            <div class="flexbox">
+                <div class="flex-item">
+                    <span class="btn-passed btn-linear">保存</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 E -->
+    <!-- 保存按钮 -->
+
+    <!-- 底部弹框 -->
+    <div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">超标管控</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国内接送机/火车</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国际接送机</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">马上叫车</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">国内包车</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">超标管控</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">选择超标原因</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">不可公司账户支付</span>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">不可预订</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 遮罩 -->
+    <div class="v-modal ds-none" onclick="popHide()"></div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    function popShow(item) {
+        $('.v-modal').removeClass('ds-none');
+        if (item === 'product') {
+            $('.popup-box').eq(0).removeClass('ds-none');
+        } else {
+            $('.popup-box').eq(1).removeClass('ds-none');
+        }
+    }
+    function popHide() {
+        $('.popup-box').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    }
+</script>

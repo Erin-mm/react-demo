@@ -1,0 +1,22 @@
+[
+  {
+    "title": "头部",
+    "name": "header",
+    "key": "0"
+  },
+  {
+    "title": "提示",
+    "name": "toast",
+    "key": "1"
+  },
+  {
+    "title": "弹框",
+    "name": "message",
+    "key": "2"
+  },
+  {
+    "title": "开关",
+    "name": "switch",
+    "key": "3"
+  }
+]

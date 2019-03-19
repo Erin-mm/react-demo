@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>编辑开票信息 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header whitebg">
+    <!-- 白底+whitebg -->
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">编辑开票信息</h1>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+    <div class="edit-policy invoice">
+        <div class="field-panel">
+            <div class="field-grid">
+                <div class="field-row">
+                    <div class="col-4-1">
+                        <span class="txt-field">配送方式</span>
+                    </div>
+                    <div class="col-4-3 send-item">
+                        <span class="txt-control">一单一寄20元/每单</span>
+                        <i class="arr-right-grid"></i>
+                    </div>
+                </div>
+                <div class="show-box ds-none">
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">收件人</span>
+                        </div>
+                        <div class="col-4-3">
+                            <input type="text" class="form-control" placeholder="请填写收件人" value="胡大拿">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">手机</span>
+                        </div>
+                        <div class="col-4-3">
+                            <input type="text" class="form-control" placeholder="请填写手机号码" value="">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">所在地区</span>
+                        </div>
+                        <div class="col-4-3">
+                            <span class="txt-control"></span>
+                            <i class="arr-right-grid"></i>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">地址</span>
+                        </div>
+                        <div class="col-4-3">
+                            <input type="text" class="form-control" placeholder="请填写具体地址" value="">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">频率</span>
+                        </div>
+                        <div class="col-4-3">
+                            <span class="txt-control">每周二</span>
+                            <i class="arr-right-grid"></i>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="col-4-1">
+                            <span class="txt-field">邮箱</span>
+                        </div>
+                        <div class="col-4-3">
+                            <input type="text" class="form-control" placeholder="请输入邮箱地址" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-box bottom ds-none">
+            <div class="popup-box-header">配送方式</div>
+            <div class="popup-box-list">
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">一单一寄20元/每单</span>
+                    <i class="icon icon-checked"></i>
+                </div>
+                <div class="popup-box-item">
+                    <span class="popup-box-txt">定期统一配送免费</span>
+                    <i class="icon icon-checked ds-none"></i>
+                </div>
+            </div>
+        </div>
+        <div class="v-modal ds-none"></div>
+    </div>
+    <!-- 内容 E -->
+
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    var sendItem = $('.send-item')
+    var popItem = $('.popup-box-item')
+    var showBox = $('.show-box')
+    popItem.click(function () {
+        var txt = $(this).find('.popup-box-txt').text();
+        sendItem.find('.txt-control').text(txt);
+        if (txt === "一单一寄20元/每单") {
+            $('.show-box').addClass('ds-none')
+        } else {
+            $('.show-box').removeClass('ds-none')
+        }
+        var index = $(this).index();
+        $(this).siblings().find('.icon-checked').addClass('ds-none');
+        $(this).find('.icon-checked').removeClass('ds-none');
+        $('.popup-box').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+       
+    })
+    sendItem.click(function () {
+        $('.v-modal').removeClass('ds-none');
+        $('.popup-box').removeClass('ds-none');
+    })
+</script>

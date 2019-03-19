@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>企业管理 - 中小企业平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- 静态资源引用编译后路径 -->
+    <link rel="stylesheet" href="./assets/style/manage.css?20171108">
+
+</head>
+
+<body>
+
+    <!-- 页头 S -->
+    <div class="m-header">
+    <div class="wrapper">
+        <div class="nav-left">
+            <span class="btn-nav-back"></span>
+        </div>
+        <div class="header-content">
+            <h1 class="heading">企业账号信息</h1>
+        </div>
+        <div class="nav-right">
+            <span class="btn-nav-txt"></span>
+        </div>
+    </div>
+</div>
+    <!-- 页头 E -->
+
+    <!-- 内容 S -->
+
+    <!-- 预存 -->
+    <div class="corp-info">
+            <div class="top">
+                <p class="title">可用余额：</p>
+                <p class="money">
+                    <span class="txt">￥</span>
+                    <span class="num">119,131.23</span>
+                </p>
+                <a class="btn btn-dtl">明细</a>
+                <a class="btn">收款账户</a>
+            </div>
+            <div class="info">
+                <span class="title">当期消费</span>
+                <span class="money money-orange">
+                    <span class="txt">￥</span>
+                    <span class="num">119,131.23</span>
+                </span>
+            </div>
+            <div class="pay-way">
+                <p>
+                    <span>公司账户支付</span>
+                    <span class="operate" onclick="msgboxShow()">转月结</span>
+                    <span class="state">预存已开通</span>
+                </p>
+            </div>
+            <div class="block">
+                <div class="header">
+                    <p>现因公预订可使用以下产品：</p>
+                </div>
+                <ul class="list">
+                    <li class="item">机票</li>
+                    <li class="item">酒店</li>
+                    <li class="item">火车</li>
+                    <li class="item">用车</li>
+                </ul>
+            </div>
+            <div class="msgbox ds-none">
+                <div class="msgbox-header">
+                    <div class="msgbox-header-title">预存转月结</div>
+                </div>
+                <!-- 如无内容直接隐去即可 -->
+                <div class="msgbox-content">
+                    <div class="msgbox-content-message">
+                        <p class="ta-left">1，开通月结后将由携程商旅垫资结算提供账期，节省企业资金空间。</p>
+                        <p class="ta-left">2，预存账户中现有的金额可用于后续月结账单支付。（月结开通后您也可以申请退还预存金额，请联系贵司项目经理）</p>
+                    </div>
+                </div>
+                <div class="msgbox-btns">
+                    <!-- 如只有一个btn直接隐去即可 -->
+                    <div class="msgbox-btn msgbox-btn-assist" onclick="msgboxHide()">取消</div>
+                    <div class="msgbox-btn msgbox-btn-main" onclick="msgboxHide()">开通月结</div>
+                </div>
+            </div>
+            <div class="v-modal ds-none" onclick="msgboxHide()"></div>
+        </div>
+
+    <!-- 限额月结 -->
+    <!-- <div class="corp-info">
+        <div class="top">
+            <p class="title">当期应还款：</p>
+            <p class="money">
+                <span class="txt">￥</span>
+                <span class="num">19131.23</span>
+            </p>
+            <span class="tip">请于每月20号前还款</span>
+            <a class="btn">收款账户</a>
+        </div>
+        <div class="detail">
+            <div class="content">
+                <p class="title">当期消费</p>
+                <p class="money money-orange">
+                    <span class="txt">￥</span>
+                    <span class="num">19131.23</span>
+                </p>
+            </div>
+            <div class="content">
+                <p class="title">当期可用额度</p>
+                <p class="money money-blue">
+                    <span class="txt">￥</span>
+                    <span class="num">25823.64</span>
+                </p>
+            </div>
+        </div>
+        <div class="pay-way">
+            <p>
+                <span>公司账户支付</span>
+                <span class="state">月结已开通</span>
+            </p>
+        </div>
+        <div class="block">
+            <div class="header">
+                <p>现因公预订可使用以下产品：</p>
+            </div>
+            <ul class="list">
+                <li class="item">机票</li>
+                <li class="item">酒店</li>
+                <li class="item">火车</li>
+                <li class="item">用车</li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- 月结 -->
+    <!-- <div class="corp-info">
+        <div class="top">
+            <p class="title">当期应还款：</p>
+            <p class="money">
+                <span class="txt">￥</span>
+                <span class="num">19131.23</span>
+            </p>
+            <span class="tip">请于每月20号前还款</span>
+            <a class="btn">收款账户</a>
+        </div>
+        <div class="info">
+            <span class="title">当期消费</span>
+            <span class="money money-orange">
+                <span class="txt">￥</span>
+                <span class="num">19131.23</span>
+            </span>
+        </div>
+        <div class="pay-way">
+            <p>
+                <span>公司账户支付</span>
+                <span class="state">月结已开通</span>
+            </p>
+        </div>
+        <div class="block">
+            <div class="header">
+                <p>现因公预订可使用以下产品：</p>
+            </div>
+            <ul class="list">
+                <li class="item">机票</li>
+                <li class="item">酒店</li>
+                <li class="item">火车</li>
+                <li class="item">用车</li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- 内容 E -->
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script>
+    function msgboxShow() {
+        $('.v-modal').removeClass('ds-none');
+        $('.msgbox').removeClass('ds-none');
+    }
+    function msgboxHide() {
+        $('.msgbox').addClass('ds-none');
+        $('.v-modal').addClass('ds-none');
+    }
+</script>

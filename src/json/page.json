@@ -1,0 +1,265 @@
+[
+  {
+    "title": "公司信息",
+    "children": [
+      {
+        "title": "公司信息页",
+        "page": "company_info"
+      },
+      {
+        "title": "修改公司名称",
+        "page": "edit_company_name"
+      },
+      {
+        "title": "差旅负责人列表",
+        "page": "manager_add"
+      },
+      {
+        "title": "选择差旅负责人",
+        "page": "manager_search"
+      }
+    ]
+  },
+  {
+    "title": "企业账号信息",
+    "children": [
+      {
+        "title": "企业账号信息页",
+        "page": "corp_info"
+      },
+      {
+        "title": "消费明细",
+        "page": "consumer_details"
+      },
+      {
+        "title": "差旅负责人列表",
+        "page": "manager_add"
+      },
+      {
+        "title": "选择差旅负责人",
+        "page": "manager_search"
+      }
+    ]
+  },
+  {
+    "title": "员工邀请",
+    "children": [
+      {
+        "title": "员工邀请页",
+        "page": "invite"
+      }
+    ]
+  },
+  {
+    "title": "员工管理",
+    "children": [
+      {
+        "title": "员工管理页",
+        "page": "staff_manage"
+      },
+      {
+        "title": "新增员工",
+        "page": "staff_add_new"
+      },
+      {
+        "title": "员工详情",
+        "page": "staff_detail"
+      },
+      {
+        "title": "员工信息编辑",
+        "page": "staff_edit"
+      },
+      {
+        "title":"携程旅行常用旅客信息",
+        "page":"fqt_tourist_list"
+      },
+      {
+        "title":"导入成功",
+        "page":"import_success"
+      },
+      {
+        "title":"导入失败",
+        "page":"import_error"
+      }
+    ]
+  },
+  {
+    "title": "组织架构",
+    "children": [
+      {
+        "title": "组织结构页",
+        "page": "org_edit"
+      },
+      {
+        "title": "员工列表",
+        "page": "org_edit_last"
+      },
+      {
+        "title": "添加部门员工",
+        "page": "org_choose_edit"
+      },
+      {
+        "title": "新增部门",
+        "page": "org_dept_add"
+      },
+      {
+        "title": "编辑部门",
+        "page": "org_dept_edit"
+      }
+    ]
+  },
+  {
+    "title": "外部出行人",
+    "children": [
+      {
+        "title": "外部出行人页",
+        "page": "external_list"
+      },
+      {
+        "title": "外包员工",
+        "page": "external_group_list"
+      },
+      {
+        "title": "新增/编辑外部出行人",
+        "page": "external_edit"
+      }
+    ]
+  },
+  {
+    "title": "代订管理",
+    "children": [
+      {
+        "title": "代订人员列表",
+        "page": "deputy_management"
+      },
+      {
+        "title": "编辑代订人",
+        "page": "deputy_edit"
+      },
+      {
+        "title": "代订范围",
+        "page": "deputy_employee"
+      }
+    ]
+  },
+  {
+    "title": "职级管理",
+    "children": [
+      {
+        "title": "职级列表",
+        "page": "staff_vip"
+      },
+      {
+        "title": "添加员工",
+        "page": "edit_vip"
+      },
+      {
+        "title": "没有员工",
+        "page": "staff_none"
+      }
+    ]
+  },
+ 
+  {
+    "title": "差标管理",
+    "children": [
+      {
+        "title": "差标管理列表",
+        "page": "standard_new"
+      },
+      {
+        "title": "机票差标编辑",
+        "page": "air_edit"
+      },
+      {
+        "title": "酒店差标编辑",
+        "page": "hotel_edit"
+      },
+      {
+        "title": "火车差标编辑",
+        "page": "train_edit"
+      },
+      {
+        "title": "用车差标编辑",
+        "page": "car_edit"
+      },
+      {
+        "title": "可选车型",
+        "page": "choose_car"
+      },
+      {
+        "title": "混付设置",
+        "page": "mess_setting"
+      }
+    ]
+  },
+  {
+    "title": "审批授权",
+    "children": [
+      {
+        "title": "审批授权页",
+        "page": "auth"
+      },
+      {
+        "title": "预定模式授权",
+        "page": "auth_book"
+      }
+    ]
+  },
+  {
+    "title": "成本中心",
+    "children": [
+      {
+        "title": "成本中心页",
+        "page": "cost"
+      }
+    ]
+  },
+  {
+    "title": "开票信息",
+    "children": [
+      {
+        "title": "开票信息页",
+        "page": "invoice_imf"
+      },
+      {
+        "title": "开票信息编辑",
+        "page": "invoice_edit"
+      }
+    ]
+  },
+  {
+    "title": "结算信息",
+    "children": [
+      {
+        "title": "结算信息设置页",
+        "page": "balance_info"
+      },
+      {
+        "title": "编辑对公支付",
+        "page": "edit_public_payment"
+      },
+      {
+        "title": "编辑汇款账户",
+        "page": "edit_reconciliant"
+      },
+      {
+        "title": "编辑对公支付",
+        "page": "edit_remit_account"
+      }
+    ]
+  },
+  {
+    "title": "单据查询",
+    "children": [
+      {
+        "title": "单据查询页",
+        "page": "documents"
+      },
+      {
+        "title": "更多筛选",
+        "page": "documents_filter"
+      }
+    ]
+  }
+]
